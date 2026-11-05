@@ -6,7 +6,7 @@
 
 [查看 / 下载预览 PDF](preview/resume_template.pdf)
 
-> **最省事**：不想装 Tectonic？有kimi额度的话，把 `resume_template.tex` 交给 Kimi，直接在对话框说「用 Tectonic 把 resume_template.tex 编译成 PDF」即可。仓库里已有编译好的 `preview/resume_template.pdf`，可以先看效果。
+> **最省事**：不想装 Tectonic？首先改完你的tex文件之后，可以直接文本复制下来，有kimi额度的话，把 `resume_template.tex` 交给 Kimi，直接在对话框说「用 Tectonic 把 resume_template.tex 编译成 PDF」即可。
 
 ## 特点
 
