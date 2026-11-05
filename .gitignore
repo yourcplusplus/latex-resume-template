@@ -1,0 +1,13 @@
+# 编译产物（只忽略根目录输出，保留 preview/ 里的预览 PDF）
+/resume_template.pdf
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# 个人照片：不要提交到公共仓库
+photo.jpg
+
+# Tectonic 缓存
+.tectonic/

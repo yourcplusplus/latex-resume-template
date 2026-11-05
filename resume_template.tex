@@ -1,0 +1,106 @@
+% ============================================================
+% 一页中文简历模板
+% 编译：tectonic -X compile resume_template.tex
+% 所有姓名 / 电话 / 邮箱 / 学校 / 项目链接均为占位符，请替换成自己的信息。
+% 如不需要照片，当前文件可直接编译；需要照片时把 photo.jpg 放到同目录。
+% photo.jpg 已加入 .gitignore，避免把真实照片提交到公共仓库。
+% ============================================================
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[top=0.8cm, bottom=0.4cm, left=1.3cm, right=1.3cm]{geometry}
+% 使用 fandol 字体集，Tectonic / Overleaf / Linux 都能直接编译。
+% 如果只在本机 Windows 上用 XeLaTeX，并且想用宋体/黑体，可改成 fontset=windows。
+\usepackage[UTF8, fontset=fandol]{ctex}
+\usepackage{xcolor}
+\definecolor{primary}{RGB}{0, 82, 147}
+\definecolor{secondary}{RGB}{100, 100, 100}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=primary,
+    pdfborder={0 0 0},
+    pdftitle={Resume Template},
+    pdfauthor={}
+}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.4em, nosep, topsep=0pt, itemsep=0pt}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage{titlesec}
+\titleformat{\section}{\normalsize\bfseries\color{primary}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{5pt}{6pt}
+
+% ========== 自定义命令 ==========
+% 项目标题：项目名称（左）+ 时间（右）
+\newcommand{\projectTitle}[2]{\noindent\textbf{#1} \hfill \textit{#2}\par\vspace{1pt}}
+% 技术栈行
+\newcommand{\projectTech}[1]{\noindent\textcolor{secondary}{\small 技术栈：#1}\par\vspace{1pt}}
+
+\begin{document}
+
+% ==================== 头部信息 ====================
+\noindent
+\begin{minipage}[c]{0.82\textwidth}
+    {\LARGE \textbf{姓名}} \\[3pt]
+    \textcolor{primary}{\textbf{求职意向：XXX 开发实习生}} \\[3pt]
+    \small
+    电话：1XX-XXXX-XXXX \quad | \quad 邮箱：\href{mailto:your@email.com}{your@email.com} \\
+    \textbf{\textcolor{red}{可实习时间：X个月以上，可随时到岗（每周全勤5天）}}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.15\textwidth}
+    \raggedleft
+    \IfFileExists{photo.jpg}{%
+        \includegraphics[height=3.2cm]{photo.jpg}%
+    }{%
+        \rule{0pt}{3.2cm}%
+    }
+\end{minipage}
+
+\vspace{-2pt}
+
+% ==================== 教育背景 ====================
+\section*{教育背景}
+\noindent
+\textbf{学校名称} \hfill 专业名称 \quad 硕士/本科 \hfill \textit{起始年月 - 结束年月}\par\vspace{2pt}
+\noindent
+\textbf{学校名称} \hfill 专业名称 \quad 硕士/本科 \hfill \textit{起始年月 - 结束年月}
+
+% ==================== 项目经历 ====================
+\section*{项目经历}
+
+\projectTitle{\href{https://github.com/yourname/project1}{项目名称 — 一句话描述}}{202X.XX - 202X.XX}
+\projectTech{技术栈1 + 技术栈2 + 技术栈3 + ...}
+\noindent\textcolor{secondary}{\small \texttt{github.com/yourname/project1}}\par\vspace{1pt}
+\begin{itemize}
+    \item \textbf{小标题1}：具体做了什么，用了什么技术/方法，取得了什么可量化结果（\textbf{加粗关键数字}）。
+    \item \textbf{小标题2}：具体做了什么，用了什么技术/方法，取得了什么可量化结果（\textbf{加粗关键数字}）。
+    \item \textbf{小标题3}：具体做了什么，用了什么技术/方法，取得了什么可量化结果（\textbf{加粗关键数字}）。
+    \item \textbf{小标题4}：具体做了什么，用了什么技术/方法，取得了什么可量化结果（\textbf{加粗关键数字}）。
+    \item \textbf{小标题5}：具体做了什么，用了什么技术/方法，取得了什么可量化结果（\textbf{加粗关键数字}）。
+\end{itemize}
+
+\vspace{1pt}
+
+\projectTitle{\href{https://github.com/yourname/project2}{项目名称 — 一句话描述}}{202X.XX - 至今}
+\projectTech{技术栈1 + 技术栈2 + 技术栈3 + ...}
+\noindent\textcolor{secondary}{\small \texttt{github.com/yourname/project2}}\par\vspace{1pt}
+\begin{itemize}
+    \item \textbf{小标题1}：具体做了什么，用了什么技术/方法，取得了什么可量化结果（\textbf{加粗关键数字}）。
+    \item \textbf{小标题2}：具体做了什么，用了什么技术/方法，取得了什么可量化结果（\textbf{加粗关键数字}）。
+    \item \textbf{小标题3}：具体做了什么，用了什么技术/方法，取得了什么可量化结果（\textbf{加粗关键数字}）。
+    \item \textbf{小标题4}：具体做了什么，用了什么技术/方法，取得了什么可量化结果（\textbf{加粗关键数字}）。
+\end{itemize}
+
+% ==================== 专业技能 ====================
+\section*{专业技能}
+\begin{itemize}
+    \item \textbf{计算机基础}：数据结构、操作系统、计算机网络基础扎实；熟悉 Linux 常用命令及 Git 工作流。
+    \item \textbf{方向1}：熟悉 XXX 范式；熟悉 XXX 框架/协议；熟悉 XXX 机制。
+    \item \textbf{方向2}：熟悉 XXX 异步 API；熟悉 XXX 数据库；熟悉 XXX 缓存/消息队列。
+    \item \textbf{方向3}：熟悉 XXX 全链路开发；熟悉 XXX 工具/模型/策略。
+    \item \textbf{工程化}：熟悉 Docker Compose 容器化部署；熟练使用 AI Coding 工具提升研发效率。
+\end{itemize}
+
+\end{document}
