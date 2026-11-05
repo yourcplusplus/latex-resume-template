@@ -6,7 +6,7 @@
 
 [查看 / 下载预览 PDF](preview/resume_template.pdf)
 
-> **最省事**：复制latex代码，让给ai根据你的项目等等信息填好空改完之后，复制给kimi，直接在对话框说「用 Tectonic 把 resume_template.tex 编译成 PDF」即可。
+> **最省事**：把 `resume_template.tex` 复制给 AI，让它根据你的项目、实习等经历把占位符填好；改完后复制给 Kimi，直接在对话框说「用 Tectonic 把 resume_template.tex 编译成 PDF」即可。
 
 ## 特点
 
