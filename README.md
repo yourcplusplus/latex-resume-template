@@ -145,6 +145,22 @@ latex-resume-template/
     └── resume_template.png  # 首页预览图
 ```
 
+## 不想本地安装？让 Kimi / AI Agent 帮你编译
+
+如果你有**能执行终端命令、读写文件**的 Kimi（或其他 AI Agent）额度，可以把仓库或 `resume_template.tex` 交给它，直接复制下面这段提示词：
+
+```text
+请在这个仓库里用 Tectonic 编译 resume_template.tex：
+1. 先运行 tectonic --version；如果没有安装，按 README 里对应系统的步骤安装。
+2. 运行 tectonic -X compile resume_template.tex。
+3. 如果失败，读取 resume_template.log 定位并修复，再重新编译。
+4. 确认生成的 resume_template.pdf 是 1 页，且没有真实个人信息；最后告诉我 PDF 的路径。
+```
+
+注意：需要 Agent 有终端 / 文件执行权限；纯聊天窗口不能真正运行 Tectonic，只能帮你检查 `.tex` 内容。
+
+仓库里的 `preview/resume_template.pdf` 已经是用 Tectonic 0.17.0 编译好的预览，不装环境也可以先看效果。
+
 ## Tectonic 教程说明
 
 本 README 已经包含安装、编译、排错和 Overleaf 替代方案，足够日常使用，不需要再维护一份单独的长教程。更多细节见官方文档：
